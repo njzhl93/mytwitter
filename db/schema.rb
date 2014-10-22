@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022103248) do
+ActiveRecord::Schema.define(version: 20141022105749) do
 
   create_table "books", force: true do |t|
     t.string   "Title"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20141022103248) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "books", ["Genre"], name: "index_books_on_genre"
 
   create_table "users", force: true do |t|
     t.string   "name"
